@@ -41,7 +41,7 @@ def request_album_creation():
     'photos': urls
   }
   request_album(album)
-  return jsonify()
+  return jsonify('aaa')
 
 def upload_s3(source_file, destination_filename):
   bucket_name = '166665-angel'
