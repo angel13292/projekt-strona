@@ -1,18 +1,61 @@
-<html>
- <head>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">  
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <title>KAMELEON - szablonystron.org</title>
+  <meta name="description" content="" /> 
+  <link rel="stylesheet" href="style/kameleon.css" type="text/css" />
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
   <script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script>
   <link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css">
-  </head>
- <body>
-  <h1>Here you can create your own album</h1>
-  <div class="dropzone" id="dropzoneForm">
+</head>
+<body>
+<div class="external">
+  <div id="logo">
+    <h1><a href="./">Leon</a></h1>
+    
+    <ul id="kontakt">
+      <li><a href="./">Kontakt</a></li>
+      <li class="last"><a href="./">Pomoc</a></li>
+    </ul>
+    <ul id="menu">
+      <li><a href="./">Strona Główna</a></li>
+      <li><a href="./">Blog</a></li>
+      <li><a href="./">Galeria</a></li>
+      <li><a href="./">Linki</a></li>
+      <li class="last"><a href="./">Kontakt</a></li>
+    </ul>
   </div>
-  <form class="requestAlbumForm" action="{{url_for('request_album_creation')}}" method="POST">
-     <input name="email" type="text"/>
-     <button type="submit">Create Album</button>
-  </form>
-  <script type="text/javascript">
+
+  <div id="main">
+     <div class="content">
+      <h2>Wyślij zdjęcia</h2>
+      <p>Projekt na zaliczenie przedmiotu Wirtualizacja i przetwarzanie w chmurze.</p>
+	  <p>Skład grupy: Angelika Glibowska, Justyna Garbacz, Katarzyna Kaszycka</p>
+	  <br/>
+	  <br/>
+	  <br/>
+	  <p>Wybierz zdjęcia:</p>
+	  
+      <div class="dropzone" id="dropzoneForm">
+			</div>
+	  <form class="requestAlbumForm" action="{{url_for('request_album_creation')}}" method="POST">
+			<input name="email" type="text" placeholder='Email'/>
+				<button type="submit">Stwórz album</button>
+			</form>
+      <div class="hr"></div>
+         
+    </div>
+
+  </div>
+    
+  <div class="clear"></div>
+</div>
+<div id="footer">
+    
+</div>
+<script type="text/javascript">
    var createInput = function(count, path) {
        	 var input = '<input type="hidden" class="photo" name="photos___number__" value="__value__"/>"'
          input = input.replace('__number__', count);
@@ -36,5 +79,5 @@
      }
    });
   </script>
- </body>
+</body>
 </html>
