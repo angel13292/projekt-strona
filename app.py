@@ -41,7 +41,21 @@ def request_album_creation():
     'photos': urls
   }
   request_album(album)
-  return jsonify('aaa')
+  return jsonify(<html>
+<meta charset="utf-8">
+<head>
+<style>
+body {background-image:url('https://s-media-cache-ak0.pinimg.com/564x/de/78/29/de78295e4c79d305ae32e733b4adbb6d.jpg');}
+h1   {color: DarkSlateBlue;}
+
+</style>
+</head>
+<body>
+
+<h1>Zdjęcia zostały wysłane! </h1>
+
+</body>
+</html>)
 
 def upload_s3(source_file, destination_filename):
   bucket_name = '166665-angel'
